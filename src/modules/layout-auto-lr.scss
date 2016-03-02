@@ -1,8 +1,10 @@
 /**layout-auto-lr Start**/
 .layout-auto-lr {
+  @extend .row;
   > .left {
   }
   > .right {
+    @extend .col;
   }
 }
 
