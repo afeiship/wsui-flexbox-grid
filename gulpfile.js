@@ -13,7 +13,7 @@
   });
 
   gulp.task('sass', function () {
-    return gulp.src('src/webkit-flex-grid.scss')
+    return gulp.src('src/webkit-css-flex-grid.scss')
       .pipe(sass({outputStyle:'expanded'}).on('error', sass.logError))
       .pipe(gulp.dest('dist'))
         .pipe(sass({outputStyle:'compressed'}).on('error', sass.logError))
