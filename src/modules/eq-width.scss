@@ -1,9 +1,0 @@
-/**eq-width Start**/
-.eq-width {
-  @extend .row;
-  & > * {
-    @extend .col;
-  }
-}
-
-/**eq-width  End**/

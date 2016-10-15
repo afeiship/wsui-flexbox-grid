@@ -5,27 +5,20 @@
   var del = require('del');
   var autoprefixer = require('gulp-autoprefixer');
   var debug = require('gulp-debug');
-  var sourcemaps = require('gulp-sourcemaps');
-  var config = {
-    sassOptions: {
-      outputStyle: 'expanded' /* nested | expanded | compact | compressed */
-    },
-    src: './src',
-    dist: './dist'
-  };
+  var rename = require('gulp-rename');
 
 
   gulp.task('clean', function () {
-    return del(config.dist);
+    return del('dist');
   });
 
   gulp.task('sass', function () {
-    return gulp.src(config.src + '/style.scss')
-      .pipe(sourcemaps.init())
-      .pipe(sass(config.sassOptions).on('error', sass.logError))
-      .pipe(autoprefixer('last 4 version'))
-      .pipe(sourcemaps.write())
-      .pipe(gulp.dest(config.dist));
+    return gulp.src('src/index.scss')
+      .pipe(sass({outputStyle:'expanded'}).on('error', sass.logError))
+      .pipe(gulp.dest('dist'))
+        .pipe(sass({outputStyle:'compressed'}).on('error', sass.logError))
+        .pipe(rename({extname:'.min.css'}))
+        .pipe(gulp.dest('dist'));
   });
 
   gulp.task('default', ['clean', 'sass']);
