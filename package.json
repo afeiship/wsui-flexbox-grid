@@ -1,7 +1,7 @@
 {
-  "name": "webkit-sass-flex-grid",
+  "name": "webkit-css-flex-grid",
   "version": "0.0.0",
-  "description": "Layout module based on flexbox(sass version)",
+  "description": "Webkit sass flex grid system use ionic.",
   "homepage": "https://github.com/afeiship",
   "author": {
     "name": "afei",
