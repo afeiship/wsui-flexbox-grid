@@ -1,7 +1,7 @@
 {
-  "name": "webkit-css-flex-grid",
+  "name": "webkit-flex-grid",
   "version": "0.0.0",
-  "description": "Webkit sass flex grid system use ionic.",
+  "description": "Webkit sass/css flex grid system use ionic.",
   "homepage": "https://github.com/afeiship",
   "author": {
     "name": "afei",
@@ -12,6 +12,7 @@
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
     "gulp-debug": "^2.1.2",
     "gulp-load-plugins": "^1.2.0",
     "gulp-rename": "^1.2.2",

@@ -1,0 +1,22 @@
+{
+  "name": "webkit-flex-grid",
+  "description": "Webkit sass/css flex grid system use ionic.",
+  "main": "dist",
+  "authors": [
+    "afei"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "flex",
+    "grid",
+    "webkit"
+  ],
+  "homepage": "https://github.com/afeiship/webkit-css-flex-grid",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,4 +1,4 @@
-# webkit-css-flex-grid
+# webkit-flex-grid
 Webkit sass flex grid system use ionic.
 
 
