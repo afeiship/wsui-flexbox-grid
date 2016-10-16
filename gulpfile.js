@@ -21,7 +21,7 @@
 
   gulp.task('styles', function () {
     return gulp.src(files)
-      .pipe(concat('webkit-scss-flex-grid.scss'))
+      .pipe(concat('webkit-sass-flex-grid.scss'))
       .pipe(gulp.dest('dist'))
       .pipe(sass({outputStyle:'expanded'}).on('error', sass.logError))
       .pipe(gulp.dest('dist'))
