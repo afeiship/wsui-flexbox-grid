@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .tc{
+      text-align: center;
+    }
+    .between {
+      justify-content: space-between;
+    }
+
+    .around {
+      justify-content: space-around;
+
+    }
+
+    .flex-container {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row wrap;
+    }
+
+    .flex-item {
+      background: tomato;
+      padding: 5px;
+      width: 200px;
+      height: 150px;
+      margin-top: 10px;
+      // margin-right:100px;
+      line-height: 150px;
+      color: white;
+      font-weight: bold;
+      font-size: 3em;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="tc">around</h1>
+  <ul class="flex-container around">
+    <li class="flex-item">1</li>
+    <li class="flex-item">2</li>
+    <li class="flex-item">3</li>
+    <li class="flex-item">3</li>
+    <li class="flex-item">11</li>
+  </ul>
+
+  <h1 class="tc">between</h1>
+  <ul class="flex-container between">
+    <li class="flex-item">1</li>
+    <li class="flex-item">2</li>
+    <li class="flex-item">9</li>
+    <li class="flex-item">10</li>
+    <li class="flex-item">11</li>
+  </ul>
+</body>
+
+</html>
