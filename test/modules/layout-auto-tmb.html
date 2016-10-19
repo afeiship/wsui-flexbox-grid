@@ -1,28 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
-  <link rel="stylesheet" type="text/css" href="../../dist/webkit-css-flex-grid.css"/>
-  <style type="text/css">
-    .layout1{
-      height:200px;
-      border:1px solid #ccc;
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flex flow demo</title>
+  <style>
+    html,
+    body {
+      height: 100%;
     }
-    .col{
-      border:1px solid #eee;
+
+    * {
+      margin: 0;
+      padding: 0;
+      -webkit-margin-before: 0;
+      -webkit-margin-after: 0;
     }
-    .h500{
-      height:500px;
-      border: 1px solid #000;
+
+    .container {
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .top {
+      background: pink;
+      height: 60px;
+    }
+
+    .body{
+      flex:1;
+      background: #eee;
+    }
+
+    .bottom {
+      height:120px;
+      background: green;
     }
   </style>
 </head>
+
 <body>
-  <div class="row-stretch h500">
-    <div class="row">row-top</div>
-    <div class="row">row-middle</div>
-    <div class="row">row-bottom</div>
+  <!-- https://segmentfault.com/a/1190000003978624 -->
+  <div class="container">
+    <div class="top">top</div>
+    <div class="body">body</div>
+    <div class="bottom">bottom</div>
   </div>
 </body>
+
 </html>
