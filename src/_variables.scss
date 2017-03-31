@@ -2,6 +2,13 @@
 // -------------------------------
 
 $grid-padding-width:              10px !default;
-$grid-responsive-sm-break:        567px !default;  // smaller than landscape phone
-$grid-responsive-md-break:        767px !default;  // smaller than portrait tablet
-$grid-responsive-lg-break:        1023px !default; // smaller than landscape tablet
+// $grid-responsive-sm-break:        567px !default;  // smaller than landscape phone
+// $grid-responsive-md-break:        767px !default;  // smaller than portrait tablet
+// $grid-responsive-lg-break:        1023px !default; // smaller than landscape tablet
+
+
+$grid-responsive:(
+  // sm:567px,
+  // md:767px,
+  // lg:1023px,
+);
