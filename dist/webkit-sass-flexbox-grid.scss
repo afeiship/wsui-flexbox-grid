@@ -8,10 +8,10 @@ $grid-padding-width:              10px !default;
 
 
 $grid-responsive:(
-  // sm:567px,
-  // md:767px,
-  // lg:1023px,
-);
+  sm:567px,
+  md:767px,
+  lg:1023px,
+)!default;
 
 @import "bower_components/webkit-sass-mixins/dist/webkit-sass-mixins.scss";
 
