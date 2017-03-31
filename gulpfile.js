@@ -11,7 +11,7 @@
     'src/_variables.scss',
     'src/_mixins.scss',
     'src/_grid.scss',
-    'src/webkit-css-flex-grid.scss'
+    'src/webkit-sass-flexbox-grid.scss'
   ];
 
 
@@ -21,7 +21,7 @@
 
   gulp.task('styles', function () {
     return gulp.src(files)
-      .pipe(concat('webkit-sass-flex-grid.scss'))
+      .pipe(concat('webkit-sass-flexbox-grid.scss'))
       .pipe(gulp.dest('dist'))
       .pipe(sass({outputStyle:'expanded'}).on('error', sass.logError))
       .pipe(gulp.dest('dist'))
