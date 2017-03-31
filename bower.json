@@ -1,6 +1,6 @@
 {
-  "name": "webkit-sass-flex-grid",
-  "description": "Webkit sass/css flex grid system use ionic.",
+  "name": "webkit-sass-flexbox-grid",
+  "description": "Webkit sass/css flexbox grid system use ionic.",
   "main": "dist",
   "authors": [
     "afei"
@@ -11,7 +11,7 @@
     "grid",
     "webkit"
   ],
-  "homepage": "https://github.com/afeiship/webkit-css-flex-grid",
+  "homepage": "https://github.com/afeiship/webkit-sass-flexbox-grid",
   "ignore": [
     "**/.*",
     "node_modules",

@@ -1,8 +1,8 @@
 {
-  "name": "webkit-sass-flex-grid",
+  "name": "webkit-sass-flexbox-grid",
   "version": "0.0.0",
-  "description": "Webkit sass/css flex grid system use ionic.",
-  "homepage": "https://github.com/afeiship",
+  "description": "Webkit sass/css flexbox grid system use ionic.",
+  "homepage": "https://github.com/afeiship/webkit-sass-flexbox-grid",
   "author": {
     "name": "afei",
     "email": "1290657123@qq.com"
