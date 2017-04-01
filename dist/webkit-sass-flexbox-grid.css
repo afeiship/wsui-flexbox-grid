@@ -75,7 +75,7 @@
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 5px;
+  padding: 0;
   width: 100%;
 }
 
@@ -95,7 +95,7 @@
 }
 
 .row + .row {
-  margin-top: -5px;
+  margin-top: 0;
   padding-top: 0;
 }
 
@@ -107,7 +107,7 @@
   -ms-flex: 1;
   flex: 1;
   display: block;
-  padding: 5px;
+  padding: 0;
   width: 100%;
 }
 
@@ -246,6 +246,16 @@
   max-width: 25%;
 }
 
+.col-30 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 30%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 30%;
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
+  max-width: 30%;
+}
+
 .col-33, .col-34 {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 33.3333%;
@@ -294,6 +304,16 @@
   -ms-flex: 0 0 66.6666%;
   flex: 0 0 66.6666%;
   max-width: 66.6666%;
+}
+
+.col-70 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 70%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 70%;
+  -ms-flex: 0 0 70%;
+  flex: 0 0 70%;
+  max-width: 70%;
 }
 
 .col-75 {
@@ -349,7 +369,7 @@
     -moz-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    margin-bottom: 15px;
+    margin-bottom: 0;
     margin-left: 0;
     max-width: 100%;
     width: 100%;
@@ -373,7 +393,7 @@
     -moz-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    margin-bottom: 15px;
+    margin-bottom: 0;
     margin-left: 0;
     max-width: 100%;
     width: 100%;
@@ -397,7 +417,7 @@
     -moz-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    margin-bottom: 15px;
+    margin-bottom: 0;
     margin-left: 0;
     max-width: 100%;
     width: 100%;
