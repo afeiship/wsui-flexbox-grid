@@ -58,6 +58,32 @@
   @include align-items(baseline);
 }
 
+/* Vertically Row Justify */
+//start end center space-around space-between
+.row-justify-start {
+  @include justify-content(flex-start);
+}
+
+.row-justify-end {
+  @include justify-content(flex-end);
+}
+
+.row-justify-center {
+  @include justify-content(center);
+}
+
+.row-justify-stretch {
+  @include justify-content(stretch);
+}
+
+.row-justify-between {
+  @include justify-content(space-between);
+}
+
+.row-justify-around {
+  @include justify-content(space-around);
+}
+
 /* .col-* vertically aligns an individual .col */
 .col-top {
   @include align-self(flex-start);
