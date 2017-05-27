@@ -19,6 +19,10 @@
   @include flex-wrap(wrap);
 }
 
+.row-full-height{
+  height:100%;
+}
+
 .row-no-padding {
   padding: 0;
 
@@ -31,6 +35,7 @@
   margin-top: ($grid-padding-width / 2) * -1;
   padding-top: 0;
 }
+
 
 .col {
   @include flex(1);
