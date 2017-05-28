@@ -31,6 +31,14 @@ $grid-responsive:(
   @include flex-wrap(wrap);
 }
 
+.row-vertical {
+  @include flex-direction(column);
+}
+.row-horizontal {
+  @include flex-direction(row);
+}
+
+
 .row-no-padding {
   padding: 0;
 
