@@ -19,14 +19,6 @@
   @include flex-wrap(wrap);
 }
 
-.row-vertical {
-  @include flex-direction(column);
-}
-.row-horizontal {
-  @include flex-direction(row);
-}
-
-
 .row-no-padding {
   padding: 0;
 
@@ -46,6 +38,14 @@
   display: block;
   padding: ($grid-padding-width / 2);
   width: 100%;
+}
+
+//box directions:
+.box-vertical {
+  @include flex-direction(column);
+}
+.box-horizontal {
+  @include flex-direction(row);
 }
 
 

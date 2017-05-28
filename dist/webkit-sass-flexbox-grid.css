@@ -86,24 +86,6 @@
   flex-wrap: wrap;
 }
 
-.row-vertical {
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.row-horizontal {
-  -webkit-box-direction: normal;
-  -webkit-box-orient: horizontal;
-  -webkit-flex-direction: row;
-  -moz-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
 .row-no-padding {
   padding: 0;
 }
@@ -127,6 +109,24 @@
   display: block;
   padding: 0;
   width: 100%;
+}
+
+.box-vertical {
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.box-horizontal {
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 /* Vertically Align Columns */
