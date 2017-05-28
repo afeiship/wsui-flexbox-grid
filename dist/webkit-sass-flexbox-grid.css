@@ -242,6 +242,13 @@
   align-self: center;
 }
 
+.col-stretch {
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
 /* Column Offsets */
 .col-offset-10 {
   margin-left: 10%;

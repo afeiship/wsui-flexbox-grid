@@ -115,6 +115,9 @@ $grid-responsive:(
 .col-center {
   @include align-self(center);
 }
+.col-stretch {
+  @include align-self(stretch);
+}
 
 /* Column Offsets */
 .col-offset-10 {
