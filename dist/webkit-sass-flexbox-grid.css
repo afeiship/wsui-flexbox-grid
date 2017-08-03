@@ -86,6 +86,13 @@
   flex-wrap: wrap;
 }
 
+.row-nowrap {
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -ms-flex-wrap: none;
+  flex-wrap: nowrap;
+}
+
 .row-no-padding {
   padding: 0;
 }

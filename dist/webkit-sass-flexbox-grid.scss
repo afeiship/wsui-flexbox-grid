@@ -31,6 +31,10 @@ $grid-responsive:(
   @include flex-wrap(wrap);
 }
 
+.row-nowrap{
+  @include flex-wrap(nowrap);
+}
+
 .row-no-padding {
   padding: 0;
 
