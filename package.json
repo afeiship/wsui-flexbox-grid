@@ -7,8 +7,8 @@
     "name": "afei",
     "email": "1290657123@qq.com"
   },
-  "scripts":{
-    "build":"gulp"
+  "scripts": {
+    "build": "gulp"
   },
   "license": "MIT",
   "devDependencies": {
@@ -20,5 +20,8 @@
     "gulp-load-plugins": "^1.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.2.0"
+  },
+  "dependencies": {
+    "webkit-sass-mixins": "github:afeiship/webkit-sass-mixins"
   }
 }
