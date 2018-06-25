@@ -11,7 +11,7 @@
     "build": "gulp"
   },
   "license": "MIT",
-  "main":"dist/webkit-sass-flexbox-grid.scss",
+  "main": "dist/webkit-sass-flexbox-grid.scss",
   "devDependencies": {
     "del": "^2.2.0",
     "gulp": "^3.9.1",

@@ -24,6 +24,8 @@
 /*flexbox End*/
 /*flip Start*/
 /*flip End*/
+/*grid Start*/
+/*grid End*/
 /*height Start*/
 /*height End*/
 /*margin Start*/
@@ -70,6 +72,11 @@
  * available width, and the height of each .col with take
  * up the height of the tallest .col in the same .row.
  */
+.row,
+.col {
+  box-sizing: border-box;
+}
+
 .row {
   display: -webkit-box;
   display: -webkit-flex;
