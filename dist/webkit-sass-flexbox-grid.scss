@@ -1,6 +1,5 @@
 // Grids
 // -------------------------------
-
 $grid-padding-width:0!default;
 $grid-responsive:(
   sm:567px,
@@ -225,6 +224,8 @@ $grid-responsive:(
 // @include responsive-grid-break('.responsive-md', $grid-responsive-md-break);
 // @include responsive-grid-break('.responsive-lg', $grid-responsive-lg-break);
 
-@each $key,$value in $grid-responsive{
-  @include responsive-grid-break(".responsive-#{$key}", $value);
+@if map-has-key($map: $grid-responsive, $key: sm) {
+  @each $key,$value in $grid-responsive{
+    @include responsive-grid-break(".responsive-#{$key}", $value);
+  }
 }

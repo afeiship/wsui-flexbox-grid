@@ -1,5 +1,5 @@
 # webkit-sass-flexbox-grid
-Webkit sass flexbox grid system use ionic.
+> Webkit sass flexbox grid system use ionic.
 
 
 ## resources:
