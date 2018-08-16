@@ -51,6 +51,9 @@ $grid-responsive:(
   padding-top: 0;
 }
 
+.column{
+  @include flex(1);
+}
 
 .col {
   @include flex(1);
