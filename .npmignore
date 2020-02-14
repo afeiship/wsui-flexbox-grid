@@ -3,3 +3,9 @@ node_modules
 src
 docs
 test
+
+.editoconfig
+bower.json
+Gemfile
+gulpfile.js
+Rakefile

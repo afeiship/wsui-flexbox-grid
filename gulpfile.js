@@ -23,9 +23,6 @@
       .pipe(concat("webkit-sass-flexbox-grid.scss"))
       .pipe(gulp.dest("dist"))
       .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
-      .pipe(gulp.dest("dist"))
-      .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
-      .pipe(rename({ extname: ".min.css" }))
       .pipe(gulp.dest("dist"));
   });
 
