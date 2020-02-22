@@ -2,9 +2,8 @@
   var gulp = require("gulp");
   var sass = require("gulp-sass");
   var del = require("del");
-  var autoprefixer = require("gulp-autoprefixer");
-  var debug = require("gulp-debug");
-  var rename = require("gulp-rename");
+  var path = require("path");
+  var SASS_INCLUDE_PATHS = [path.join(__dirname, "/node_modules/")];
   var concat = require("gulp-concat");
   var files = [
     "src/_variables.scss",
@@ -22,7 +21,12 @@
       .src(files)
       .pipe(concat("webkit-sass-flexbox-grid.scss"))
       .pipe(gulp.dest("dist"))
-      .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
+      .pipe(
+        sass({ outputStyle: "expanded", includePaths: SASS_INCLUDE_PATHS }).on(
+          "error",
+          sass.logError
+        )
+      )
       .pipe(gulp.dest("dist"));
   });
 
