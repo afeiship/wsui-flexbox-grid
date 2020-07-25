@@ -3,6 +3,7 @@
   var sass = require("gulp-sass");
   var del = require("del");
   var path = require("path");
+  var pkgHeader = require('@feizheng/gulp-pkg-header');
   var SASS_INCLUDE_PATHS = [path.join(__dirname, "/node_modules/")];
   var concat = require("gulp-concat");
   var files = [
@@ -20,6 +21,7 @@
     return gulp
       .src(files)
       .pipe(concat("webkit-sass-flexbox-grid.scss"))
+      .pipe(pkgHeader())
       .pipe(gulp.dest("dist"))
       .pipe(
         sass({ outputStyle: "expanded", includePaths: SASS_INCLUDE_PATHS }).on(

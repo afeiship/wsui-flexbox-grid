@@ -1,5 +1,19 @@
-/*flexbox Start*/
-/*flexbox End*/
+/*!
+ * name: @feizheng/webkit-sass-flexbox-grid
+ * description: Webkit sass flexbox grid system.
+ * homepage: https://github.com/afeiship/webkit-sass-flexbox-grid
+ * version: 2.0.0
+ * date: 2020-07-25T12:46:24.079Z
+ * license: MIT
+ */
+/*!
+ * name: @feizheng/webkit-sass-mixins
+ * description: Webkit sass mixins.
+ * homepage: https://github.com/afeiship/webkit-sass-mixins
+ * version: 2.0.0
+ * date: 2020-07-25T12:27:22.619Z
+ * license: MIT
+ */
 /*animation Start*/
 /*animation End*/
 /*appearance Start*/
@@ -24,6 +38,8 @@
 /*filter End*/
 /*grid Start*/
 /*grid End*/
+/*flexbox Start*/
+/*flexbox End*/
 /*flip Start*/
 /*flip End*/
 /*grid Start*/
@@ -62,6 +78,8 @@
  */
 /*user-select Start*/
 /*user-select End*/
+/*width Start*/
+/*width End*/
 /*_grid Start*/
 /**
  * Grid

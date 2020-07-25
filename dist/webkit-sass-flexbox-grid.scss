@@ -1,3 +1,12 @@
+/*!
+ * name: @feizheng/webkit-sass-flexbox-grid
+ * description: Webkit sass flexbox grid system.
+ * homepage: https://github.com/afeiship/webkit-sass-flexbox-grid
+ * version: 2.0.0
+ * date: 2020-07-25T12:46:24.079Z
+ * license: MIT
+ */
+
 // Grids
 // -------------------------------
 $grid-padding-width:0!default;
@@ -7,7 +16,7 @@ $grid-responsive:(
   // lg:1023px,
 )!default;
 
-@import "@feizheng/webkit-sass-mixins/dist/webkit-sass-mixins.scss";
+@import "@feizheng/webkit-sass-mixins/dist/index.scss";
 
 /*_grid Start*/
 /**
