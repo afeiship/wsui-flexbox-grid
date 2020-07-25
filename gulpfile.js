@@ -20,7 +20,7 @@
   gulp.task("styles", function() {
     return gulp
       .src(files)
-      .pipe(concat("webkit-sass-flexbox-grid.scss"))
+      .pipe(concat("index.scss"))
       .pipe(pkgHeader())
       .pipe(gulp.dest("dist"))
       .pipe(
