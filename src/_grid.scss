@@ -19,6 +19,10 @@
   width: 100%;
 }
 
+.flex{
+  @include display-flex();
+}
+
 .row-wrap {
   @include flex-wrap(wrap);
 }
