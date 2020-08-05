@@ -3,7 +3,7 @@
  * description: Webkit sass flexbox grid system.
  * homepage: https://github.com/afeiship/webkit-sass-flexbox-grid
  * version: 2.1.2
- * date: 2020-08-05T00:48:40.292Z
+ * date: 2020-08-05T00:50:47.507Z
  * license: MIT
  */
 /*!
@@ -95,7 +95,7 @@
   box-sizing: border-box;
 }
 
-.row {
+.row-no-width, .row {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -103,6 +103,9 @@
   display: -ms-flexbox;
   display: flex;
   padding: 0;
+}
+
+.row {
   width: 100%;
 }
 
@@ -134,16 +137,6 @@
 }
 
 .row-no-padding > .col {
-  padding: 0;
-}
-
-.row-no-width {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
   padding: 0;
 }
 
@@ -324,7 +317,8 @@
   margin-left: 25%;
 }
 
-.col-offset-33, .col-offset-34 {
+.col-offset-33,
+.col-offset-34 {
   margin-left: 33.3333%;
 }
 
@@ -332,7 +326,8 @@
   margin-left: 50%;
 }
 
-.col-offset-66, .col-offset-67 {
+.col-offset-66,
+.col-offset-67 {
   margin-left: 66.6666%;
 }
 
@@ -392,7 +387,8 @@
   width: 30%;
 }
 
-.col-33, .col-34 {
+.col-33,
+.col-34 {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 33.3333%;
   -moz-box-flex: 0;
@@ -432,7 +428,8 @@
   width: 60%;
 }
 
-.col-66, .col-67 {
+.col-66,
+.col-67 {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 66.6666%;
   -moz-box-flex: 0;
