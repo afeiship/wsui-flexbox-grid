@@ -2,8 +2,8 @@
  * name: @feizheng/webkit-sass-flexbox-grid
  * description: Webkit sass flexbox grid system.
  * homepage: https://github.com/afeiship/webkit-sass-flexbox-grid
- * version: 2.1.1
- * date: 2020-08-04T23:50:03.948Z
+ * version: 2.1.2
+ * date: 2020-08-05T00:48:40.292Z
  * license: MIT
  */
 /*!
@@ -134,6 +134,16 @@
 }
 
 .row-no-padding > .col {
+  padding: 0;
+}
+
+.row-no-width {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
   padding: 0;
 }
 

@@ -39,6 +39,11 @@
   }
 }
 
+.row-no-width{
+  @include display-flex();
+  padding: ($grid-padding-width / 2);
+}
+
 .row + .row {
   margin-top: ($grid-padding-width / 2) * -1;
   padding-top: 0;
