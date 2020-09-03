@@ -63,8 +63,17 @@
 .box-vertical {
   @include flex-direction(column);
 }
+
 .box-horizontal {
   @include flex-direction(row);
+}
+
+.box-row-reverse {
+  @include flex-direction(row-reverse);
+}
+
+.box-column-reverse {
+  @include flex-direction(column-reverse);
 }
 
 /* Vertically Align Columns */
