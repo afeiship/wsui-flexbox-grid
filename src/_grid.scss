@@ -43,10 +43,10 @@
   }
 }
 
-.row + .row {
-  margin-top: ($grid-padding-width / 2) * -1;
-  padding-top: 0;
-}
+// .row + .row {
+//   margin-top: ($grid-padding-width / 2) * -1;
+//   padding-top: 0;
+// }
 
 .column {
   @include flex(1);
