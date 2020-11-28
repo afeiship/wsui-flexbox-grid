@@ -1,22 +1,22 @@
 /*!
- * name: @feizheng/webkit-sass-flexbox-grid
+ * name: @jswork/wsui-flexbox-grid
  * description: Webkit sass flexbox grid system.
- * homepage: https://github.com/afeiship/webkit-sass-flexbox-grid
- * version: 2.1.4
- * date: 2020-09-13T03:15:36.769Z
+ * homepage: https://github.com/afeiship/wsui-flexbox-grid
+ * version: 1.0.0
+ * date: 2020-11-28 18:16:37
  * license: MIT
  */
 
 // Grids
 // -------------------------------
-$grid-padding-width:0!default;
-$grid-responsive:(
-  // sm:567px,
-  // md:767px,
-  // lg:1023px,
-)!default;
+$grid-padding-width: 0 !default;
+$grid-responsive: (
+  // sm: 567px,
+  // md: 767px,
+  // lg: 1023px,
+) !default;
 
-@import "@feizheng/webkit-sass-mixins/dist/index.scss";
+@import "@jswork/wsui-mixins/dist/index.scss";
 
 /*_grid Start*/
 /**
