@@ -22,7 +22,7 @@
   @extend .row-no-width;
   margin-left: -$grid-padding-width;
   margin-right: -$grid-padding-width;
-  width: calc(100% + 2 * $grid-padding-width);
+  width: calc(100% + 2 * #{$grid-padding-width});
 }
 
 .flex {
