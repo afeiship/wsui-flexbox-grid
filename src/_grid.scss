@@ -20,7 +20,9 @@
 
 .row {
   @extend .row-no-width;
-  width: 100%;
+  margin-left: -$grid-padding-width;
+  margin-right: -$grid-padding-width;
+  width: calc(100% + 2 * $grid-padding-width);
 }
 
 .flex {
@@ -37,6 +39,8 @@
 
 .row-no-padding {
   padding: 0;
+  margin: 0;
+  width: 100%;
 
   > .col {
     padding: 0;
