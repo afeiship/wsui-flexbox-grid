@@ -2,8 +2,8 @@
  * name: @jswork/wsui-flexbox-grid
  * description: Webkit sass flexbox grid system.
  * homepage: https://github.com/afeiship/wsui-flexbox-grid
- * version: 1.0.5
- * date: 2022-03-17 17:38:04
+ * version: 1.0.6
+ * date: 2022-03-17 22:13:03
  * license: MIT
  */
 
@@ -28,7 +28,6 @@ $grid-responsive: (
       /* prettier-ignore */
       .col, .col-10, .col-20, .col-25, .col-33, .col-34, .col-50, .col-66, .col-67, .col-75, .col-80, .col-90 {
         @include flex(1);
-        margin-bottom: $grid-padding-width;
         margin-left: 0;
         max-width: 100%;
         width: 100%;
@@ -86,10 +85,10 @@ $grid-responsive: (
   }
 }
 
-// .row + .row {
-//   margin-top: ($grid-padding-width / 2) * -1;
-//   padding-top: 0;
-// }
+.row + .row {
+  margin-top: ($grid-padding-width / 2) * -1;
+  padding-top: 0;
+}
 
 .column {
   @include flex(1);
