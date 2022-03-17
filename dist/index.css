@@ -2,8 +2,8 @@
  * name: @jswork/wsui-flexbox-grid
  * description: Webkit sass flexbox grid system.
  * homepage: https://github.com/afeiship/wsui-flexbox-grid
- * version: 1.0.1
- * date: 2022-03-17 17:23:57
+ * version: 1.0.2
+ * date: 2022-03-17 17:31:06
  * license: MIT
  */
 /*_grid Start*/
@@ -264,7 +264,7 @@
   }
   .responsive-sm .col, .responsive-sm .col-10, .responsive-sm .col-20, .responsive-sm .col-25, .responsive-sm .col-33, .responsive-sm .col-34, .responsive-sm .col-50, .responsive-sm .col-66, .responsive-sm .col-67, .responsive-sm .col-75, .responsive-sm .col-80, .responsive-sm .col-90 {
     flex: 1;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     margin-left: 0;
     max-width: 100%;
     width: 100%;
@@ -278,7 +278,7 @@
   }
   .responsive-md .col, .responsive-md .col-10, .responsive-md .col-20, .responsive-md .col-25, .responsive-md .col-33, .responsive-md .col-34, .responsive-md .col-50, .responsive-md .col-66, .responsive-md .col-67, .responsive-md .col-75, .responsive-md .col-80, .responsive-md .col-90 {
     flex: 1;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     margin-left: 0;
     max-width: 100%;
     width: 100%;
@@ -292,7 +292,7 @@
   }
   .responsive-lg .col, .responsive-lg .col-10, .responsive-lg .col-20, .responsive-lg .col-25, .responsive-lg .col-33, .responsive-lg .col-34, .responsive-lg .col-50, .responsive-lg .col-66, .responsive-lg .col-67, .responsive-lg .col-75, .responsive-lg .col-80, .responsive-lg .col-90 {
     flex: 1;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     margin-left: 0;
     max-width: 100%;
     width: 100%;
