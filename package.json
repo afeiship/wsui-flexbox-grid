@@ -1,6 +1,6 @@
 {
   "name": "@jswork/wsui-flexbox-grid",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Webkit sass flexbox grid system.",
   "homepage": "https://github.com/afeiship/wsui-flexbox-grid",
   "author": {
@@ -30,9 +30,6 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
-  },
-  "dependencies": {
-    "@jswork/wsui-mixins": "^1.0.0"
   },
   "keywords": [
     "ionic",

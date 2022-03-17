@@ -2,21 +2,40 @@
  * name: @jswork/wsui-flexbox-grid
  * description: Webkit sass flexbox grid system.
  * homepage: https://github.com/afeiship/wsui-flexbox-grid
- * version: 1.0.0
- * date: 2020-11-28 18:17:55
+ * version: 1.0.1
+ * date: 2022-03-17 17:23:57
  * license: MIT
  */
 
 // Grids
 // -------------------------------
-$grid-padding-width: 0 !default;
+$grid-padding-width: 10px !default;
 $grid-responsive: (
-  // sm: 567px,
-  // md: 767px,
-  // lg: 1023px,
+  sm: 567px,
+  md: 767px,
+  lg: 1023px,
 ) !default;
 
-@import "@jswork/wsui-mixins/dist/index.scss";
+@mixin flex($fg: 1, $fs: null, $fb: null) {
+  flex: $fg $fs $fb;
+}
+
+@mixin responsive-grid-break($selector, $max-width) {
+  @media (max-width: $max-width) {
+    #{$selector} {
+      flex-direction: column;
+
+      /* prettier-ignore */
+      .col, .col-10, .col-20, .col-25, .col-33, .col-34, .col-50, .col-66, .col-67, .col-75, .col-80, .col-90 {
+        @include flex(1);
+        margin-bottom: ($grid-padding-width * 3) / 2;
+        margin-left: 0;
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
 
 /*_grid Start*/
 /**
@@ -34,7 +53,7 @@ $grid-responsive: (
 }
 
 .row-no-width {
-  @include display-flex();
+  display: flex;
   padding: ($grid-padding-width / 2);
 }
 
@@ -44,15 +63,15 @@ $grid-responsive: (
 }
 
 .flex {
-  @include display-flex();
+  display: flex;
 }
 
 .row-wrap {
-  @include flex-wrap(wrap);
+  flex-wrap: wrap;
 }
 
 .row-nowrap {
-  @include flex-wrap(nowrap);
+  flex-wrap: nowrap;
 }
 
 .row-no-padding {
@@ -81,77 +100,77 @@ $grid-responsive: (
 
 //box directions:
 .box-vertical {
-  @include flex-direction(column);
+  flex-direction: column;
 }
 
 .box-horizontal {
-  @include flex-direction(row);
+  flex-direction: row;
 }
 
 .box-row-reverse {
-  @include flex-direction(row-reverse);
+  flex-direction: row-reverse;
 }
 
 .box-column-reverse {
-  @include flex-direction(column-reverse);
+  flex-direction: column-reverse;
 }
 
 /* Vertically Align Columns */
 /* .row-* vertically aligns every .col in the .row */
 .row-top {
-  @include align-items(flex-start);
+  align-items: flex-start;
 }
 .row-bottom {
-  @include align-items(flex-end);
+  align-items: flex-end;
 }
 .row-center {
-  @include align-items(center);
+  align-items: center;
 }
 .row-stretch {
-  @include align-items(stretch);
+  align-items: stretch;
 }
 .row-baseline {
-  @include align-items(baseline);
+  align-items: baseline;
 }
 
 /* Vertically Row Justify */
 //start end center space-around space-between
 .row-justify-start {
-  @include justify-content(flex-start);
+  justify-content: flex-start;
 }
 
 .row-justify-end {
-  @include justify-content(flex-end);
+  justify-content: flex-end;
 }
 
 .row-justify-center {
-  @include justify-content(center);
+  justify-content: center;
 }
 
 .row-justify-stretch {
-  @include justify-content(stretch);
+  justify-content: stretch;
 }
 
 .row-justify-between {
-  @include justify-content(space-between);
+  justify-content: space-between;
 }
 
 .row-justify-around {
-  @include justify-content(space-around);
+  justify-content: space-around;
 }
 
 /* .col-* vertically aligns an individual .col */
 .col-top {
-  @include align-self(flex-start);
+  align-self: flex-start;
 }
 .col-bottom {
-  @include align-self(flex-end);
+  align-self: flex-end;
 }
 .col-center {
-  @include align-self(center);
+  align-self: center;
 }
 .col-stretch {
-  @include align-self(stretch);
+  align-self: stretch;
 }
 
 /* Column Offsets */
