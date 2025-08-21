@@ -16,19 +16,23 @@ $grid-responsive: (
 :root {
   --grid-gap-x: #{$grid-gap-x};
   --grid-gap-y: #{$grid-gap-y};
+  --grid-gap-x-half: calc(var(--grid-gap-x) / 2);
+  --grid-gap-y-half: calc(var(--grid-gap-y) / 2);
+  --grid-gap-x-half-negative: calc(var(--grid-gap-x) / -2);
+  --grid-gap-y-half-negative: calc(var(--grid-gap-y) / -2);
 }
 
 [class*='wsui-cols-'] {
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
-  margin: calc(var(--grid-gap-y) * -0.5) calc(var(--grid-gap-x) * -0.5);
+  margin: var(--grid-gap-y-half-negative) var(--grid-gap-x-half-negative);
 }
 
 // class * with .col-
 [class*='wsui-cols-'] > * {
   box-sizing: border-box;
-  margin: calc(var(--grid-gap-y) * 0.5) calc(var(--grid-gap-x) * 0.5);
+  margin: var(--grid-gap-y-half) var(--grid-gap-x-half);
 }
 
 @each $grid-num in $grid-list {

@@ -1,18 +1,22 @@
 :root {
   --grid-gap-x: 10px;
   --grid-gap-y: 10px;
+  --grid-gap-x-half: calc(var(--grid-gap-x) / 2);
+  --grid-gap-y-half: calc(var(--grid-gap-y) / 2);
+  --grid-gap-x-half-negative: calc(var(--grid-gap-x) / -2);
+  --grid-gap-y-half-negative: calc(var(--grid-gap-y) / -2);
 }
 
 [class*=wsui-cols-] {
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
-  margin: calc(var(--grid-gap-y) * -0.5) calc(var(--grid-gap-x) * -0.5);
+  margin: var(--grid-gap-y-half-negative) var(--grid-gap-x-half-negative);
 }
 
 [class*=wsui-cols-] > * {
   box-sizing: border-box;
-  margin: calc(var(--grid-gap-y) * 0.5) calc(var(--grid-gap-x) * 0.5);
+  margin: var(--grid-gap-y-half) var(--grid-gap-x-half);
 }
 
 .wsui-cols-1 > * {
