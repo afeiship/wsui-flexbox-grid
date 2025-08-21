@@ -8,10 +8,10 @@ $grid-gap-y: $grid-gap !default;
 $grid-nums: 24;
 $grid-list: (1, 2, 3, 4, 5, 6,7, 8, 9, 10);
 $grid-responsive: (
-  xs: 1024px, // 添加 px 单位
+  xs: 390px, // 添加 px 单位
   sm: 1280px,
   md: 1440px,
-  lg: 1920px
+  lg: 1600px
 ) !default;
 
 :root {

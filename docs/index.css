@@ -61,7 +61,7 @@
   width: calc(10% - var(--grid-gap-x));
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 390px) {
   .grid-cols-xs-1 > * {
     width: calc(100% - var(--grid-gap-x));
   }
@@ -157,7 +157,7 @@
     width: calc(10% - var(--grid-gap-x));
   }
 }
-@media (min-width: 1920px) {
+@media (min-width: 1600px) {
   .grid-cols-lg-1 > * {
     width: calc(100% - var(--grid-gap-x));
   }
