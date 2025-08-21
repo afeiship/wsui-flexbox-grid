@@ -7,16 +7,23 @@
   <title>Flexbox</title>
   <link rel="stylesheet" href="index.css">
   <style>
-    .row{ border:1px solid #000; }
+    * { margin:0; padding:0; box-sizing: border-box; }
     .col{ background: #eee;}
+    .container { border: 1px solid red; width: 900px; margin: 40px auto; }
   </style>
 </head>
 <body>
-  <div class="row">
-    <div class="col">111</div>
-    <div class="col">111</div>
-    <div class="col">111</div>
-    <div class="col">111</div>
+  <div class="container grid-container">
+    <div class="grid-cols-2">
+      <div class="col">111</div>
+      <div class="col">111</div>
+      <div class="col">111</div>
+      <div class="col">111</div>
+      <div class="col">111</div>
+      <div class="col">111</div>
+      <div class="col">111</div>
+      <div class="col">111</div>
+    </div>
   </div>
 </body>
 </html>

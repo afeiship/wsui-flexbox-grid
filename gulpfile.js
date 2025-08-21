@@ -7,11 +7,11 @@ const SASS_INCLUDE_PATHS = [path.join(__dirname, '/node_modules/')];
 const concat = require('gulp-concat');
 const files = ['src/index.scss'];
 
-gulp.task('clean', function () {
+gulp.task('clean', function() {
   return del('dist');
 });
 
-gulp.task('styles', function () {
+gulp.task('styles', function() {
   return gulp
     .src(files)
     .pipe(concat('index.scss'))
@@ -20,19 +20,23 @@ gulp.task('styles', function () {
 });
 
 // 新增 css 任务
-gulp.task('css', function () {
+gulp.task('css', function() {
   return gulp
     .src('src/index.scss')
     .pipe(
       sass({
         outputStyle: 'expanded',
         includePaths: SASS_INCLUDE_PATHS,
-        silenceDeprecations: ['legacy-js-api']
-      }).on('error', sass.logError)
+        silenceDeprecations: ['legacy-js-api'],
+      }).on('error', sass.logError),
     )
     .pipe(concat('index.css'))
     .pipe(gulp.dest('docs'));
 });
 
-gulp.task('default', gulp.series(['clean', 'styles', 'css']));
-gulp.task('default', gulp.series(['clean', 'styles', 'css']));
+
+gulp.task('build', gulp.series(['clean', 'styles', 'css']));
+gulp.task('dev', gulp.series(['clean', 'styles', 'css', function watch () {
+    gulp.watch('src/**/*.scss', gulp.series('styles', 'css'));
+  }]),
+);
