@@ -1,3 +1,5 @@
+@use "sass:math";
+
 /*_grid Start*/
 /**
  * Grid
@@ -15,7 +17,7 @@
 
 .row-no-width {
   display: flex;
-  padding: ($grid-padding-width / 2);
+  padding: math.div($grid-padding-width, 2);
 }
 
 .row {
@@ -48,7 +50,7 @@
 }
 
 .row + .row {
-  margin-top: ($grid-padding-width / 2) * -1;
+  margin-top: math.div($grid-padding-width, 2) * -1;
   padding-top: 0;
 }
 
@@ -59,7 +61,7 @@
 .col {
   @include flex(1);
   display: block;
-  padding: ($grid-padding-width / 2);
+  padding: math.div($grid-padding-width, 2);
   width: 100%;
 }
 
