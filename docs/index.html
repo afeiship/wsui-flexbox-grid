@@ -33,17 +33,41 @@
     }
 
     .container {
-      border: 1px solid red;
       margin: 40px auto;
       padding: 10px;
       display: flex;
       flex-direction: column;
       gap: 10px;
     }
+
+    .screen-info {
+      position: fixed;
+      top: 4px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 12px;
+      z-index: 9999;
+      min-width: 120px;
+      text-align: center;
+    }
+
+    .screen-info div {
+      display: inline-block;
+    }
   </style>
 </head>
 
 <body>
+  <!-- 屏幕尺寸显示器 -->
+  <div class="screen-info" id="screenInfo">
+    <div>W: <span id="screenWidth">0</span>px</div>
+    <div>H: <span id="screenHeight">0</span>px</div>
+  </div>
+
   <div class="container grid-container">
     <table>
       <thead>
@@ -128,6 +152,21 @@
       <div class="col">111</div>
     </div>
   </div>
+
+  <script>
+    function updateScreenInfo() {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      document.getElementById('screenWidth').textContent = width;
+      document.getElementById('screenHeight').textContent = height;
+    }
+
+    // 初始化显示
+    updateScreenInfo();
+
+    // 监听窗口大小变化
+    window.addEventListener('resize', updateScreenInfo);
+  </script>
 </body>
 
 </html>
