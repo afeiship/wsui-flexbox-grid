@@ -1,43 +1,35 @@
 const gulp = require('gulp');
 const sass = require('gulp-dart-sass'); // 替换为 gulp-dart-sass
 const del = require('del');
-const path = require('path');
 const pkgHeader = require('@jswork/gulp-pkg-header');
-const SASS_INCLUDE_PATHS = [path.join(__dirname, '/node_modules/')];
 const concat = require('gulp-concat');
-const files = ['src/index.scss'];
+
+const sassOptions = {
+  outputStyle: 'expanded',
+  precision: 4,
+  includePaths: ['./node_modules'],
+  silenceDeprecations: ['legacy-js-api'],
+};
 
 gulp.task('clean', function() {
   return del('dist');
 });
 
+// 新增 css 任务
 gulp.task('styles', function() {
   return gulp
-    .src(files)
-    .pipe(concat('index.scss'))
-    .pipe(pkgHeader())
-    .pipe(gulp.dest('dist'));
-});
-
-// 新增 css 任务
-gulp.task('css', function() {
-  return gulp
     .src('src/index.scss')
-    .pipe(
-      sass({
-        outputStyle: 'expanded',
-        includePaths: SASS_INCLUDE_PATHS,
-        silenceDeprecations: ['legacy-js-api'],
-      }).on('error', sass.logError),
-    )
+    .pipe(pkgHeader())
+    .pipe(gulp.dest('dist'))
+    .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(concat('style.css'))
     .pipe(gulp.dest('docs'))
     .pipe(gulp.dest('dist'));
 });
 
 
-gulp.task('build', gulp.series(['clean', 'styles', 'css']));
-gulp.task('dev', gulp.series(['clean', 'styles', 'css', function watch () {
-    gulp.watch('src/**/*.scss', gulp.series('styles', 'css'));
+gulp.task('build', gulp.series(['clean', 'styles']));
+gulp.task('dev', gulp.series(['clean', 'styles', function watch () {
+    gulp.watch('src/**/*.scss', gulp.series('styles'));
   }]),
 );
