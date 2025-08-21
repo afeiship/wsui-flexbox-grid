@@ -1,5 +1,5 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
+const sass = require('gulp-dart-sass'); // 替换为 gulp-dart-sass
 const del = require('del');
 const path = require('path');
 const pkgHeader = require('@jswork/gulp-pkg-header');
@@ -23,10 +23,16 @@ gulp.task('styles', function () {
 gulp.task('css', function () {
   return gulp
     .src('src/index.scss')
-    .pipe(sass({ outputStyle: 'expanded', includePaths: SASS_INCLUDE_PATHS }).on('error', sass.logError))
+    .pipe(
+      sass({
+        outputStyle: 'expanded',
+        includePaths: SASS_INCLUDE_PATHS,
+        silenceDeprecations: ['legacy-js-api']
+      }).on('error', sass.logError)
+    )
     .pipe(concat('styles.css'))
     .pipe(gulp.dest('dist'));
 });
 
-// 默认任务串联
+gulp.task('default', gulp.series(['clean', 'styles', 'css']));
 gulp.task('default', gulp.series(['clean', 'styles', 'css']));
