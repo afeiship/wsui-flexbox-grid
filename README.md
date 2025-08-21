@@ -12,7 +12,34 @@ npm i @jswork/wsui-flexbox-grid
 ```
 
 ## usage
+```html
+
+<div class="wsui-cols-1 wsui-cols-xs-2 wsui-cols-sm-4 wsui-cols-md-5 wsui-cols-lg-6">
+  <div class="col">111</div>
+  <div class="col">111</div>
+  <div class="col">111</div>
+  <div class="col">111</div>
+  <div class="col">111</div>
+  <div class="col">111</div>
+  <div class="col">111</div>
+  <div class="col">111</div>
+</div>
+```
+
+## customize
 ```scss
+$grid-gap: 10px !default;
+$grid-gap-x: $grid-gap !default;
+$grid-gap-y: $grid-gap !default;
+$grid-nums: 24;
+$grid-list: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+$grid-responsive: (
+  xs: 390px,
+  sm: 1280px,
+  md: 1440px,
+  lg: 1600px
+) !default;
+
 @import '~@jswork/wsui-flexbox-grid';
 ```
 
