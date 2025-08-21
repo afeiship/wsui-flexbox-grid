@@ -39,12 +39,13 @@ $grid-responsive: (
   lg: 1600px
 ) !default;
 
-@import '~@jswork/wsui-flexbox-grid';
+@import '@jswork/wsui-flexbox-grid';
 ```
 
 ## resources
 - https://www.zhihu.com/question/29924791
 - https://segmentfault.com/a/1190000002910324
+- https://segmentfault.com/q/1010000043586951
 - http://the-echoplex.net/flexyboxes/
 
 ## license
