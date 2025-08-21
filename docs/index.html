@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +8,115 @@
   <title>Flexbox</title>
   <link rel="stylesheet" href="index.css">
   <style>
-    * { margin:0; padding:0; box-sizing: border-box; }
-    .col{ background: #eee;}
-    .container { border: 1px solid red; margin: 40px auto; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    table {
+      width: 100%;
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+    }
+
+    table tr,
+    table th,
+    table td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+
+    .col {
+      background: #eee;
+    }
+
+    .container {
+      border: 1px solid red;
+      margin: 40px auto;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
   </style>
 </head>
+
 <body>
   <div class="container grid-container">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col" style="text-align: null">
+            <div>屏幕宽度</div>
+          </th>
+          <th scope="col" style="text-align: null">
+            <div>列数</div>
+          </th>
+          <th scope="col" style="text-align: null">
+            <div>说明</div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: null">
+            <div><code translate="no">&lt; 576px</code></div>
+          </td>
+          <td style="text-align: null">
+            <div>1 列</div>
+          </td>
+          <td style="text-align: null">
+            <div>使用 <code translate="no">grid-cols-1</code></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: null">
+            <div><code translate="no">≥ xs: 390px</code></div>
+          </td>
+          <td style="text-align: null">
+            <div>2 列</div>
+          </td>
+          <td style="text-align: null">
+            <div><code translate="no">grid-cols-xs-2</code> 生效</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: null">
+            <div><code translate="no">≥ sm: 1280px</code></div>
+          </td>
+          <td style="text-align: null">
+            <div>4 列</div>
+          </td>
+          <td style="text-align: null">
+            <div><code translate="no">grid-cols-sm-4</code> 覆盖前面</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: null">
+            <div><code translate="no">≥ md: 1440px </code></div>
+          </td>
+          <td style="text-align: null">
+            <div>5 列</div>
+          </td>
+          <td style="text-align: null">
+            <div><code translate="no">grid-cols-md-5</code> 生效</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: null">
+            <div><code translate="no">≥ lg: 1600px </code></div>
+          </td>
+          <td style="text-align: null">
+            <div>6 列</div>
+          </td>
+          <td style="text-align: null">
+            <div><code translate="no">grid-cols-lg-6</code> 最终生效</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
     <div class="grid-cols-1 grid-cols-xs-2 grid-cols-sm-4 grid-cols-md-5 grid-cols-lg-6">
       <div class="col">111</div>
       <div class="col">111</div>
@@ -26,4 +129,5 @@
     </div>
   </div>
 </body>
+
 </html>

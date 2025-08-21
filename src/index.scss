@@ -6,9 +6,9 @@ $grid-gap: 10px !default;
 $grid-gap-x: $grid-gap !default;
 $grid-gap-y: $grid-gap !default;
 $grid-nums: 24;
-$grid-list: (1, 2, 3, 4, 5, 6,7, 8, 9, 10);
+$grid-list: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 $grid-responsive: (
-  xs: 390px, // 添加 px 单位
+  xs: 390px,
   sm: 1280px,
   md: 1440px,
   lg: 1600px
@@ -51,7 +51,9 @@ $grid-responsive: (
   @media (min-width: $min-width) {
     @each $grid-num in $grid-list {
       .grid-cols-#{$breakpoint}-#{$grid-num} > * {
-        width: calc(#{math.percentage(math.div(1, $grid-num))} - var(--grid-gap-x));
+        width: calc(
+          #{math.percentage(math.div(1, $grid-num))} - var(--grid-gap-x)
+        );
       }
     }
   }
