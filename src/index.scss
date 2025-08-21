@@ -19,7 +19,7 @@ $grid-responsive: (
   --grid-gap-y: #{$grid-gap-y};
 }
 
-[class*='grid-cols-'] {
+[class*='wsui-cols-'] {
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
@@ -27,7 +27,7 @@ $grid-responsive: (
 }
 
 // class * with .col-
-[class*='grid-cols-'] > * {
+[class*='wsui-cols-'] > * {
   padding: calc(var(--grid-gap-y) * 0.5) calc(var(--grid-gap-x) * 0.5);
   box-sizing: border-box;
   float: left;
@@ -35,7 +35,7 @@ $grid-responsive: (
 }
 
 @each $grid-num in $grid-list {
-  .grid-cols-#{$grid-num} > * {
+  .wsui-cols-#{$grid-num} > * {
     width: calc(#{math.percentage(math.div(1, $grid-num))} - var(--grid-gap-x));
   }
 }
@@ -43,7 +43,7 @@ $grid-responsive: (
 @each $breakpoint, $min-width in $grid-responsive {
   @media (min-width: $min-width) {
     @each $grid-num in $grid-list {
-      .grid-cols-#{$breakpoint}-#{$grid-num} > * {
+      .wsui-cols-#{$breakpoint}-#{$grid-num} > * {
         width: calc(
           #{math.percentage(math.div(1, $grid-num))} - var(--grid-gap-x)
         );
