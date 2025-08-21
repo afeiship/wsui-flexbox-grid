@@ -19,10 +19,6 @@ $grid-responsive: (
   --grid-gap-y: #{$grid-gap-y};
 }
 
-.grid-container {
-  overflow: hidden;
-}
-
 [class*='grid-cols-'] {
   display: flex;
   flex-wrap: wrap;
