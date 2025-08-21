@@ -27,9 +27,7 @@ $grid-responsive: (
 
 // class * with .col-
 [class*='wsui-cols-'] > * {
-  padding: calc(var(--grid-gap-y) * 0.5) calc(var(--grid-gap-x) * 0.5);
   box-sizing: border-box;
-  float: left;
   margin: calc(var(--grid-gap-y) * 0.5) calc(var(--grid-gap-x) * 0.5);
 }
 

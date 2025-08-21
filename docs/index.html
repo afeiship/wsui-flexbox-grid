@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,10 +13,19 @@
       box-sizing: border-box;
     }
 
+    :root {
+      --grid-gap-x: 14px;
+      --grid-gap-y: 14px;
+    }
+
     table {
       width: 100%;
       border: 1px solid #ccc;
       border-collapse: collapse;
+    }
+
+    table th {
+      background: #eee;
     }
 
     table tr,
@@ -29,7 +37,9 @@
     }
 
     .col {
+      border: 1px dotted #ddd;
       background: #eee;
+      padding: 12px;
     }
 
     .container {
@@ -59,90 +69,101 @@
     .screen-info div {
       display: inline-block;
     }
+
+    .ovh {
+      /*overflow: hidden;*/
+    }
+
+    .debug-red {
+      border: 2px solid red;
+    }
+
+    .debug-blue {
+      border: 2px solid blue;
+    }
   </style>
 </head>
-
 <body>
-  <!-- 屏幕尺寸显示器 -->
-  <div class="screen-info" id="screenInfo">
-    <div>W: <span id="screenWidth">0</span>px</div>
-    <div>H: <span id="screenHeight">0</span>px</div>
-  </div>
-
-  <div class="container">
-    <table>
-      <thead>
-        <tr>
-          <th scope="col" style="text-align: null">
-            <div>屏幕宽度</div>
-          </th>
-          <th scope="col" style="text-align: null">
-            <div>列数</div>
-          </th>
-          <th scope="col" style="text-align: null">
-            <div>说明</div>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="text-align: null">
-            <div><code translate="no">&lt; 576px</code></div>
-          </td>
-          <td style="text-align: null">
-            <div>1 列</div>
-          </td>
-          <td style="text-align: null">
-            <div>使用 <code translate="no">wsui-cols-1</code></div>
-          </td>
-        </tr>
-        <tr>
-          <td style="text-align: null">
-            <div><code translate="no">≥ xs: 390px</code></div>
-          </td>
-          <td style="text-align: null">
-            <div>2 列</div>
-          </td>
-          <td style="text-align: null">
-            <div><code translate="no">wsui-cols-xs-2</code> 生效</div>
-          </td>
-        </tr>
-        <tr>
-          <td style="text-align: null">
-            <div><code translate="no">≥ sm: 1280px</code></div>
-          </td>
-          <td style="text-align: null">
-            <div>4 列</div>
-          </td>
-          <td style="text-align: null">
-            <div><code translate="no">wsui-cols-sm-4</code> 覆盖前面</div>
-          </td>
-        </tr>
-        <tr>
-          <td style="text-align: null">
-            <div><code translate="no">≥ md: 1440px </code></div>
-          </td>
-          <td style="text-align: null">
-            <div>5 列</div>
-          </td>
-          <td style="text-align: null">
-            <div><code translate="no">wsui-cols-md-5</code> 生效</div>
-          </td>
-        </tr>
-        <tr>
-          <td style="text-align: null">
-            <div><code translate="no">≥ lg: 1600px </code></div>
-          </td>
-          <td style="text-align: null">
-            <div>6 列</div>
-          </td>
-          <td style="text-align: null">
-            <div><code translate="no">wsui-cols-lg-6</code> 最终生效</div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="wsui-cols-1 wsui-cols-xs-2 wsui-cols-sm-4 wsui-cols-md-5 wsui-cols-lg-6">
+<!-- 屏幕尺寸显示器 -->
+<div class="screen-info" id="screenInfo">
+  <div>W: <span id="screenWidth">0</span>px</div>
+  <div>H: <span id="screenHeight">0</span>px</div>
+</div>
+<div class="container">
+  <table>
+    <thead>
+    <tr>
+      <th scope="col">
+        <div>屏幕宽度</div>
+      </th>
+      <th scope="col">
+        <div>列数</div>
+      </th>
+      <th scope="col">
+        <div>说明</div>
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>
+        <div><code>&lt; 576px</code></div>
+      </td>
+      <td>
+        <div>1 列</div>
+      </td>
+      <td>
+        <div>使用 <code>wsui-cols-1</code></div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div><code>≥ xs: 390px</code></div>
+      </td>
+      <td>
+        <div>2 列</div>
+      </td>
+      <td>
+        <div><code>wsui-cols-xs-2</code> 生效</div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div><code>≥ sm: 1280px</code></div>
+      </td>
+      <td>
+        <div>4 列</div>
+      </td>
+      <td>
+        <div><code>wsui-cols-sm-4</code> 覆盖前面</div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div><code>≥ md: 1440px </code></div>
+      </td>
+      <td>
+        <div>5 列</div>
+      </td>
+      <td>
+        <div><code>wsui-cols-md-5</code> 生效</div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div><code>≥ lg: 1600px </code></div>
+      </td>
+      <td>
+        <div>6 列</div>
+      </td>
+      <td>
+        <div><code>wsui-cols-lg-6</code> 最终生效</div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="ovh debug-red">
+    <div class="wsui-cols-1 wsui-cols-xs-2 wsui-cols-sm-4 wsui-cols-md-5 wsui-cols-lg-6 debug-blue">
       <div class="col">111</div>
       <div class="col">111</div>
       <div class="col">111</div>
@@ -153,21 +174,20 @@
       <div class="col">111</div>
     </div>
   </div>
+</div>
+<script>
+  function updateScreenInfo () {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    document.getElementById('screenWidth').textContent = width;
+    document.getElementById('screenHeight').textContent = height;
+  }
 
-  <script>
-    function updateScreenInfo() {
-      const width = window.innerWidth;
-      const height = window.innerHeight;
-      document.getElementById('screenWidth').textContent = width;
-      document.getElementById('screenHeight').textContent = height;
-    }
+  // 初始化显示
+  updateScreenInfo();
 
-    // 初始化显示
-    updateScreenInfo();
-
-    // 监听窗口大小变化
-    window.addEventListener('resize', updateScreenInfo);
-  </script>
+  // 监听窗口大小变化
+  window.addEventListener('resize', updateScreenInfo);
+</script>
 </body>
-
 </html>
