@@ -1,13 +1,16 @@
 {
   "name": "@jswork/wsui-flexbox-grid",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Webkit sass flexbox grid system.",
   "homepage": "https://github.com/afeiship/wsui-flexbox-grid",
   "author": {
     "name": "afei",
     "email": "1290657123@qq.com"
   },
-  "files": ["src", "dist"],
+  "files": [
+    "src",
+    "dist"
+  ],
   "scripts": {
     "dev": "serve & gulp dev",
     "build": "gulp build",
@@ -32,5 +35,11 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "keywords": ["ionic", "webkit", "sass", "flexbox", "grid"]
+  "keywords": [
+    "ionic",
+    "webkit",
+    "sass",
+    "flexbox",
+    "grid"
+  ]
 }
