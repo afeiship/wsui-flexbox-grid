@@ -5,25 +5,28 @@ const path = require('path');
 const pkgHeader = require('@jswork/gulp-pkg-header');
 const SASS_INCLUDE_PATHS = [path.join(__dirname, '/node_modules/')];
 const concat = require('gulp-concat');
-const files = [
-  'src/_variables.scss',
-  'src/_mixins.scss',
-  'src/_grid.scss',
-  'src/index.scss',
-];
+const files = ['src/index.scss'];
 
-gulp.task('clean', function() {
+gulp.task('clean', function () {
   return del('dist');
 });
 
-gulp.task('styles', function() {
+gulp.task('styles', function () {
   return gulp
     .src(files)
     .pipe(concat('index.scss'))
     .pipe(pkgHeader())
-    .pipe(gulp.dest('dist'))
-    .pipe(sass({ outputStyle: 'expanded', includePaths: SASS_INCLUDE_PATHS }))
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', gulp.series(['clean', 'styles']));
+// 新增 css 任务
+gulp.task('css', function () {
+  return gulp
+    .src('src/index.scss')
+    .pipe(sass({ outputStyle: 'expanded', includePaths: SASS_INCLUDE_PATHS }).on('error', sass.logError))
+    .pipe(concat('styles.css'))
+    .pipe(gulp.dest('dist'));
+});
+
+// 默认任务串联
+gulp.task('default', gulp.series(['clean', 'styles', 'css']));
