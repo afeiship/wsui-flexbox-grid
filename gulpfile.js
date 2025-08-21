@@ -30,8 +30,8 @@ gulp.task('css', function () {
         silenceDeprecations: ['legacy-js-api']
       }).on('error', sass.logError)
     )
-    .pipe(concat('styles.css'))
-    .pipe(gulp.dest('dist'));
+    .pipe(concat('index.css'))
+    .pipe(gulp.dest('docs'));
 });
 
 gulp.task('default', gulp.series(['clean', 'styles', 'css']));
